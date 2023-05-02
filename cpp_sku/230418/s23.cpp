@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+class Circle {
+    int radius;
+public:
+    Circle(): Circle(1) { }
+    Circle(int r): radius(r) { }
+    double getArea() { return 3.14 * radius * radius; }
+};
+
+int main() {
+    cout << "2022305080 주현준\n\n";
+
+    Circle donut;
+    Circle pizza(30);
+
+    Circle* p;
+    p = &donut;
+    cout << p->getArea() << endl;
+    cout << (*p).getArea() << endl;
+    cout << donut.getArea() << endl;
+
+    p = &pizza;
+    cout << p->getArea() << endl;
+    cout << (*p).getArea() << endl;
+    cout << pizza.getArea() << endl;
+
+    return 0;
+}
