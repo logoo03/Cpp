@@ -1,12 +1,34 @@
-#ifndef _ISPRIME_H
-#define _ISPRIME_H
+#pragma once
+#include <stdbool.h>
 
-int isPrime(int n) {
-    if (n < 2) return 0;
+bool isPrime(short n) {
+    if (n < 2) return false;
     int i = 2;
     while (i * i <= n)
-        if (n % i++ == 0) return 0;
-    return 1;
+        if (n % i++ == 0) return false;
+    return true;
 }
 
-#endif
+bool isPrime(int n) {
+    if (n < 2) return false;
+    int i = 2;
+    while (i * i <= n)
+        if (n % i++ == 0) return false;
+    return true;
+}
+
+bool isPrime(long n) {
+    if (n < 2) return false;
+    int i = 2;
+    while (i * i <= n)
+        if (n % i++ == 0) return false;
+    return true;
+}
+
+bool isPrime(long long n) {
+    if (n < 2) return false;
+    int i = 2;
+    while (i * i <= n)
+        if (n % i++ == 0) return false;
+    return true;
+}
